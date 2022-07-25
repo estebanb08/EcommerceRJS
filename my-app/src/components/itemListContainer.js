@@ -1,10 +1,14 @@
-import './itemListContainer.css';
+import './css/itemListContainer.css';
+import ItemCount from './itemCount.js';
 
-function ItemListContainer (){
-    const message = "Este va a hacer el catalogo"
-
-    return <p>{message}</p>
-
+const ItemListContainer = ({greeting}) => { 
+    return(
+    <div>
+        <h2>{greeting}</h2>
+        <ItemCount initial={1} stock={15}/>
+    </div>
+    )
+   
 }
     
 export default ItemListContainer;
